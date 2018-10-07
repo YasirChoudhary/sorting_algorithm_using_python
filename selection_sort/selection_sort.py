@@ -4,13 +4,15 @@ list_of_numbers = [5,7,8,9,3]
 def sort(arg):
 
 	n = len(arg)
-	for i in range(0,n-1):
+	for i in range(n-1):
 		i_min = i
-		for j in range(1,n):
-			if arg[j] < arg[i]:
-				temp = arg[j]
-				arg[j] = arg[i]
-				arg[i] = temp
+		for j in range(i+1,n):
+			if arg[j] < arg[i_min]:
+
+				arg[j],arg[i_min] = arg[i_min],arg[j]
+				#temp = arg[j]
+				#arg[j] = arg[i_min]
+				#arg[i_min] = temp
 	return arg
 
 
